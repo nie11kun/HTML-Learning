@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>first header</h1>
+        <h3>second header</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">work</a></li>
+            <li><a href="">outside</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>this is the title</h1>
+        <section>
+            <h1>first section</h1>
+            <p>test section one</p>
+        </section>
+        <aside>test aside</aside>
+    </article>
+    <audio src="" controls>not supported</audio><br>
+    <audio controls>
+        <source src="" type="audio/mpeg">
+        <source src="" type="audio/ogg">
+    </audio><br>
+    <hr>
+    <video controls>
+        <source src="" type="video/mp4">
+        video is not supported
+    </video><br>
+    <hr>
+    Status: <progress min="0" max="100" value="35">
+    </progress><br>
+    <hr>
+
+    <form action="" autocomplete="off">
+        <label for="email">your email:</label>
+        <input type="text" id="email" name="email" placeholder="email@example.com" autofocus required>
+        <input type="submit" name="Submit" id="submit"><br>
+        <input type="search" name="search" id="search"><br>
+        <input type="text" name="car" list="colors">
+        <datalist id="colors">
+            <option value="red"></option>
+            <option value="blue"></option>
+            <option value="yellow"></option>
+        </datalist>
+    </form>
+
+    <svg width="300" height="300">
+        <circle cx="80" cy="80" r="50" fill="green">
+    </svg><br>
+    <svg width="400" height="300">
+        <ellipse cx="180" cy="80" rx="150" ry="50" style=fill:green>
+    </svg><br>
+    <svg width="300" height="300">
+        <rect width="100" height="50" x="100" y="20" fill="red">
+    </svg><br>
+    <svg width="300" height="380">
+        <line x1="10" y1="10" x2="150" y2="350" style="stroke:#000000;stroke-linecap:round;stroke-width:10px">
+    </svg><br>
+    <svg width="300" height="380">
+        <polyline style="stroke-linejoin:miter; stroke:black; stroke-width:10px; fill: none" points="30 30, 80 10, 100 50">
+    </svg><br>
+    <svg width="300" height="380">
+        <polygon style="stroke-linejoin:miter; stroke:black; stroke-width:10px; fill: green" points="30 30, 80 10, 100 50">
+    </svg><br>
+    <svg width="1000" height="300">
+        <rect width="100" height="50" style="fill:blue">
+            <animate attributeName="x" from="0" to="300" dur="1s" fill="freeze" repeatCount="indefinite">
+        </rect>
+    </svg><br>
+    <svg width="200" height="200">
+        <path d="M 0 0 L 200 200 L 200 0 Z" style="stroke:blue; fill:none">
+    </svg><br>
+
+    <canvas id="canvas1" width="200" height="200">
+    </canvas><br>
+    <canvas id="canvas2" width="300" height="500">
+    </canvas><br>
+
+    <script>
+        var can1=document.getElementById("canvas1");
+        var ctx1=can1.getContext("2d");
+        var can2=document.getElementById("canvas2");
+        var ctx2=can2.getContext("2d");
+
+        ctx1.fillStyle="#ff0000";
+        ctx1.fillRect(20,20,100,100);
+        ctx1.rotate((Math.PI/180)*25);
+        ctx1.fillStyle="#00ff00";
+        ctx1.fillRect(20,20,100,100);
+
+        ctx2.font="bold 22px Tahoma";
+        ctx2.textAlign="start";
+        ctx2.fillText("start now",10,30);
+        ctx2.translate(100,50);
+        ctx2.fillText("after translate",10,30);
+        ctx2.rotate(1);
+        ctx2.fillText("after rotate",10,30);
+        ctx2.scale(2,4);
+        ctx2.fillText("after scale",10,30);
+    </script>
+
+
+
+
+    <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:2px solid black;height:200px;width:200px">
+    </div>
+    <img id="image" src="https://i.imgur.com/EnQctNC.png" draggable="true" ondragstart="drag(event)" height="50px" width="50px" alt="">
+</body>
+</html>
