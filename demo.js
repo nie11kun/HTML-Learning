@@ -128,7 +128,6 @@ var input1 = prompt("input a num");
 var output1 = Math.sqrt(input1);
 alert(output1);
 
-*/
 
 var ii = 0;
 function myAlert() {
@@ -143,7 +142,117 @@ function time() {
     var secs = currDate.getSeconds();
     document.body.innerHTML = hours + ":" + mins + ":" + secs;
 }
+//setInterval(time, 1000);
+*/
 
+function repleace() {
+    var id1 = document.getElementById("demo");
+    var class1 = document.getElementsByClassName("demo");
+    var tag1 = document.getElementsByTagName("div");
+    var idChild = id1.childNodes;
 
-setInterval(time, 1000);
+    id1.style.color = "#00ff00"
+    id1.style.backgroundColor = "#ff0000";
+    id1.innerHTML = "hello";
+}
+setInterval(repleace, 1000);
+
+window.onload = function() {
+    var p1 = document.createElement("p");
+    var text2 = document.createTextNode("some text");
+    p1.appendChild(text2);
+
+    var id2 = document.getElementById("demo2");
+    id2.appendChild(p1);
+}
+
+function removeItems() {
+    var p4 = document.createElement("p");
+    var text2 = document.createTextNode("some new text");
+    p4.appendChild(text2);
+
+    var p1 = document.getElementById("body");
+    var p2 = document.getElementById("demo3");
+    var p3 = document.getElementById("demo2");
+
+    p1.removeChild(p2);
+    p1.replaceChild(p4, p3);
+}
+
+setInterval(removeItems,2000);
+
+window.onload = function(){
+    var pos = 0;
+    var box = document.getElementById("box");
+    var t = setInterval(move, 10);
+    
+    function move() {
+        if (pos >= 150) {
+            clearInterval(t);
+        }
+        else{
+            pos += 1;
+            box.style.left = pos + "px";
+        }
+    }
+
+    var a = document.getElementById("demo4");
+    var b = document.getElementById("demo5");
+    a.onclick = function() {
+        b.innerHTML = new Date();
+    }
+
+    var input1 = document.getElementById("name1");
+    input1.addEventListener("click", overChange, false);
+
+    function overChange() {
+        input1.style.color = "#ff0000";
+    }
+}
+
+function onChange() {
+    var input1 = document.getElementById("name1");
+    input1.value = input1.value.toUpperCase();
+}
+
+var images = [
+    "http://www.sololearn.com/uploads/slider/1.jpg", 
+    "http://www.sololearn.com/uploads/slider/2.jpg", 
+    "http://www.sololearn.com/uploads/slider/3.jpg"
+];
+var num1 = 0;
+
+function prev() {
+    var slider = document.getElementById("slider");
+    num1--;
+
+    if(num1 < 0) {
+        num1 = images.length - 1;
+    }
+
+    slider.src = images[num1];
+}
+function next() {
+    var slider = document.getElementById("slider");
+    num1++;
+
+    if(num1 >= images.length) {
+        num1 = 0;
+    }
+
+    slider.src = images[num1];
+}
+
+function validate() {
+    var n1 = document.getElementById("num1");
+    var n2 = document.getElementById("num2");
+
+    if (n1.value != "" && n2.value != "") {
+        if (n1.value == n2.value) {
+            return true;
+        }
+    }
+    alert("not same word");
+    return false;
+}
 

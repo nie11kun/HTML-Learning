@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="js-test.css">
 </head>
-<body>
+<body id="body">
 
+    <div id="container">
+        <div id="box"></div>
+    </div>
+
+    <div id="demo" style="color:rgb(168, 87, 87)"></div>
+    <div id="demo2"></div>
+    <div id="demo3">remove</div>
+    <button id="demo4">click</button>
+    <div id="demo5">date</div>
+
+    <form action="">
+        <input type="text" id="name1" onchange="onChange()">
+    </form>
+
+    <div>
+        <button onclick="prev()">Prev</button>
+        <img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" alt="" srcset="">
+        <button onclick="next()">Next</button>
+    </div>
+    <hr>
+
+    <form onsubmit="return validate()" method="POST">
+        <input id="num1" name="num1" type="text"><br>
+        <input id="num2" name="num2" type="text"><br>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>
