@@ -1,0 +1,59 @@
+p {
+    /*comment*/
+    color: brown;
+    background-color: black
+}
+#spP {
+    color: blue;
+    background-color: white;
+    font-size: 130%;
+    text-align: center;
+}
+.frist1 {
+    color: blueviolet;
+    background-color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: small;
+}
+#div1 .frist1 b {
+    color: chartreuse;
+    background-color: aqua;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: lighter;
+    font-variant: small-caps;
+}
+td.top {
+    vertical-align: top;
+}
+td.middle {
+    vertical-align: middle;
+}
+td.bottom {
+    vertical-align: bottom;
+}
+
+span.baseline {
+    vertical-align: baseline;
+}
+span.sub {
+    vertical-align: sub;
+}
+span.super {
+    vertical-align: super;
+}
+span.pixel {
+    vertical-align: -10px;
+}
+
+div.div3 {
+
+    height: 100px;
+    width: 200px;
+    background-color: blueviolet;
+    display: inline-table;
+}
+div.div4 {
+    display: table-cell;
+    vertical-align: middle;
+}
