@@ -1,0 +1,86 @@
+.border1 {
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    color: white;
+    display: inline-table;
+    box-shadow: inset 5px 5px 10px #999999;
+}
+.border2 {
+    border-radius: 0 0 15px 15px;
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    box-shadow: 10px 10px 5px 5px #00ff00;
+}
+.border3 {
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    box-shadow:
+    inset 10px 10px 5px #999999,
+    inset -10px -10px 5px #999999;
+}
+.border4 {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    box-shadow:
+    0 0 15px 10px #131ebe,
+    0 0 30px 20px #0dca6c;
+}
+#cell1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 10px 10px 5px rgba(66, 66, 66, 0.8);
+}
+body {
+    background-color: rgb(176, 238, 238);
+}
+nav {
+    padding: 50px;
+    min-width: 500px;
+}
+nav ul {
+    background: linear-gradient(90deg, 
+     rgba(255, 255, 255, 0) 0%, 
+     rgba(255, 255, 255, 0.2) 25%, 
+     rgba(255, 255, 255, 0.2) 75%, 
+     rgba(255, 255, 255, 0) 100%);
+     box-shadow:
+     0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+nav ul li {
+    display: inline-block;
+}
+#parent p:first-child {
+    color: #131ebe;
+    text-decoration: underline;
+}
+#test1 {
+    font-size: 30px;
+}
+#test2 {
+    font-size: 30px;
+}
+#test1::first-line {
+    color: rgb(79, 27, 221);
+    text-decoration: underline;
+}
+#test2::selection {
+    color: #e91515;
+    background: #131ebe;
+}
+#test1::before {
+    content: url(http://www.sololearn.com/images/bullet.jpg);
+}
+#test3 {
+    border: 1px solid red;
+    width: 100px;
+    word-wrap: break-word;
+}
