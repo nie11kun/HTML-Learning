@@ -1,6 +1,7 @@
 <?php
-
+    session_start();
     include "header.php";//require
+    require "initial.php";
 
     echo "<strong>hello word</strong>";
     echo "hello word";
@@ -84,5 +85,20 @@
     test1();
     test1(40);
 
-    echo test1(2);
+    echo test1(2)."<br>";
+
+    echo $_SERVER["SCRIPT_NAME"]."<br>";
+
+    echo '<img src="'.$images_path.'css_logo.png"/>';
+    echo '<img src="'.$_SESSION["images_path"].'css_logo.png"/><br>';
+
+    if (isset($_COOKIE["name"])) {
+        echo "name is ".$_COOKIE["name"]."<br>";
+    }
+
+    $read = file("file.txt");
+    foreach ($read as $line) {
+        echo $line."<br>";
+    }
+
 ?>
