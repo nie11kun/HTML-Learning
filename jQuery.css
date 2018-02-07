@@ -1,0 +1,18 @@
+.test1 {
+    border: 1px solid red;
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+}
+.test2 {
+    font-size: 20px;
+    color: blue;
+}
+#test10 {
+    border: 10px solid red;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+
+}
