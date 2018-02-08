@@ -98,4 +98,12 @@ $(function () {
     $("#test24").on("click", function () {
         $("#test23").slideToggle(500);
     });
+
+    $("#test25").on("click", function () {
+        $("#test25").animate({width: "50px", paddingTop:"0px"}, 1000);
+    });
+
+    $("#test27").on("click", function () {
+        $("#test28").slideToggle(500);
+    });
 });
