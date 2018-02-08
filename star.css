@@ -1,0 +1,14 @@
+.star {
+    position: relative;
+    cursor: pointer;
+}
+.starFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+}
+
