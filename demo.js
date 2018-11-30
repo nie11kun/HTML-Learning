@@ -151,7 +151,7 @@ function repleace() {
     var tag1 = document.getElementsByTagName("div");
     var idChild = id1.childNodes;
 
-    id1.style.color = "#00ff00"
+    id1.style.color = "#00ff00";
     id1.style.backgroundColor = "#ff0000";
     id1.innerHTML = "hello";
 }
