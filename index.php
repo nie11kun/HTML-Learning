@@ -37,7 +37,7 @@
     } else {
         echo "";
     }
-
+    echo "<br>";
     $var6 = 0;
     while ($var6 <= 10) {
         echo "$var6 <br>";
