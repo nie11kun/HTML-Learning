@@ -145,6 +145,8 @@ function time() {
 //setInterval(time, 1000);
 */
 
+document.write('document.referrer');
+
 function repleace() {
     var id1 = document.getElementById("demo");
     var class1 = document.getElementsByClassName("demo");
